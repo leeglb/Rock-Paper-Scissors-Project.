@@ -234,7 +234,7 @@ with mp_hands.Hands(
                 #cv2.putText(image, RPS_random, (20, 500), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 255, 255), 2)
 
                 
-        resize = cv2.resize(image, (2440, 1800))
+        resize = cv2.resize(image, (600,600))
         cv2.imshow(WINDOW_NAME, resize)
         
         key = cv2.waitKey(1) & 0xFF
