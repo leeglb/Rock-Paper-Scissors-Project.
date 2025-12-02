@@ -66,7 +66,7 @@ with mp_hands.Hands(
         
         if results.multi_hand_landmarks:
             for hand_landmarks, handed in zip(results.multi_hand_landmarks, results.multi_handedness):
-                
+                    
                 mp_drawing.draw_landmarks(image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
 
                 which_hand = handed.classification[0].label
@@ -234,7 +234,7 @@ with mp_hands.Hands(
                 #cv2.putText(image, RPS_random, (20, 500), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 255, 255), 2)
 
                 
-        resize = cv2.resize(image, (2440, 1800))
+        resize = cv2.resize(image, (600,600))
         cv2.imshow(WINDOW_NAME, resize)
         
         key = cv2.waitKey(1) & 0xFF
